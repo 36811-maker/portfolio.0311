@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Emilly Barbosa — Desenvolvedora de Software Jr. Conheça meus projetos, trajetória e soluções com código organizado e usabilidade.">
+  <meta name="description" content="Portfólio de Emilly Barbosa — Desenvolvedora de Software Jr. Conheça meus conhecimentos, projetos e trajetória com código organizado e usabilidade.">
   <meta name="author" content="Emilly Barbosa">
   <title>Emilly Barbosa — Desenvolvedora de Software Jr.</title>
 
@@ -19,166 +19,668 @@
   <!-- Luz de fundo interativa (Glow suave inspirado em Studio Nikita) -->
   <div class="interactive-glow" id="interactiveGlow" aria-hidden="true"></div>
 
-  <!-- Início da Seção HERO (Desenvolvimento exclusivo desta Etapa 1) -->
-  <header class="hero-section" id="hero">
-    
-    <!-- Barra Superior Editorial (Inspiração John Gearhart) -->
-    <div class="hero-top-bar">
-      <div class="hero-brand">
+  <!-- =========================================================================
+       1. MENU DE NAVEGAÇÃO FIXO NO TOPO (Requisito 1 de funcionalidades.md)
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#hero" class="nav-brand" aria-label="Voltar ao início">
         <span class="brand-monogram">EB</span>
-        <span class="brand-label">Portfólio Editorial</span>
-      </div>
+        <span class="brand-title">Emilly Barbosa</span>
+      </a>
 
-      <div class="hero-status-pill" aria-label="Status profissional">
-        <span class="status-indicator"></span>
-        <span class="status-text">Disponível para oportunidades</span>
-      </div>
+      <!-- Botão Hambúrguer para Mobile -->
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
 
-      <div class="hero-edition">
-        <span>Edição 2026 ✦ Brasil</span>
-      </div>
-    </div>
-
-    <!-- Conteúdo Central do HERO -->
-    <div class="hero-container">
-      
-      <!-- Linhas decorativas sutis de estilo catálogo/editorial -->
-      <div class="editorial-lines" aria-hidden="true">
-        <span class="line-left"></span>
-        <span class="line-tag">ED. 01 — INÍCIO</span>
-        <span class="line-right"></span>
-      </div>
-
-      <div class="hero-content">
-        <!-- Cargo em destaque com badge editorial -->
-        <div class="hero-role-wrapper">
-          <span class="hero-role-badge">
-            <svg class="role-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            Desenvolvedora de Software Jr.
-          </span>
-        </div>
-
-        <!-- Nome em destaque principal com tipografia artística Dr Sugiyama -->
-        <h1 class="hero-title">
-          <span class="hero-title-name">Emilly Barbosa</span>
-        </h1>
-
-        <!-- Frase de Apresentação Oficial -->
-        <p class="hero-statement">
-          "Desenvolvo software com código organizado, boa usabilidade e foco em soluções práticas."
-        </p>
-
-        <!-- Card de Destaque Tecnológico / Metadados do Perfil -->
-        <div class="hero-meta-card">
-          <div class="meta-item">
-            <span class="meta-label">Stack Base</span>
-            <span class="meta-value">HTML5 ✦ CSS3 ✦ JavaScript (Vanilla)</span>
-          </div>
-          <div class="meta-divider" aria-hidden="true"></div>
-          <div class="meta-item">
-            <span class="meta-label">Foco de Atuação</span>
-            <span class="meta-value">Frontend & Interfaces Web Criativas</span>
-          </div>
-        </div>
-
-        <!-- Botão CTA com Animação de Preenchimento Dinâmico (Inspiração Elespacio) -->
-        <div class="hero-action-wrapper">
-          <button type="button" class="btn-cta" id="btnExplore" aria-haspopup="dialog" aria-expanded="false">
-            <span class="btn-cta-bg"></span>
-            <span class="btn-cta-content">
-              <span class="btn-cta-text">Explorar portfólio</span>
-              <span class="btn-cta-icon-wrapper" aria-hidden="true">
-                <svg class="btn-cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </span>
-            </span>
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Marquee Animado Contínuo no Rodapé do Hero (Inspiração Bhavana Kulkarni) -->
-    <div class="hero-marquee-wrapper" aria-label="Destaques de atuação">
-      <div class="hero-marquee-track">
-        <div class="hero-marquee-group">
-          <span>DESENVOLVIMENTO WEB</span>
-          <span class="marquee-bullet">✦</span>
-          <span>CÓDIGO ORGANIZADO</span>
-          <span class="marquee-bullet">✦</span>
-          <span>USABILIDADE & BOA EXPERIÊNCIA</span>
-          <span class="marquee-bullet">✦</span>
-          <span>JAVASCRIPT PURO</span>
-          <span class="marquee-bullet">✦</span>
-          <span>SOLUÇÕES PRÁTICAS</span>
-          <span class="marquee-bullet">✦</span>
-          <span>HTML5 & CSS3</span>
-          <span class="marquee-bullet">✦</span>
-          <span>DESIGN EDITORIAL</span>
-          <span class="marquee-bullet">✦</span>
-        </div>
-        <!-- Grupo duplicado para criar o efeito de loop infinito perfeitamente fluido -->
-        <div class="hero-marquee-group" aria-hidden="true">
-          <span>DESENVOLVIMENTO WEB</span>
-          <span class="marquee-bullet">✦</span>
-          <span>CÓDIGO ORGANIZADO</span>
-          <span class="marquee-bullet">✦</span>
-          <span>USABILIDADE & BOA EXPERIÊNCIA</span>
-          <span class="marquee-bullet">✦</span>
-          <span>JAVASCRIPT PURO</span>
-          <span class="marquee-bullet">✦</span>
-          <span>SOLUÇÕES PRÁTICAS</span>
-          <span class="marquee-bullet">✦</span>
-          <span>HTML5 & CSS3</span>
-          <span class="marquee-bullet">✦</span>
-          <span>DESIGN EDITORIAL</span>
-          <span class="marquee-bullet">✦</span>
-        </div>
-      </div>
-    </div>
-
+      <!-- Lista de Links com Sublinhado Animado (Inspiração Elespacio) -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link active">Início</a>
+        </li>
+        <li class="nav-item">
+          <a href="#sobre" class="nav-link">Sobre Mim</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projetos" class="nav-link">Projetos</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contato" class="nav-link">Contato</a>
+        </li>
+        <li class="nav-item nav-item-cta">
+          <a href="#contato" class="nav-cta-btn">Fale Comigo</a>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <!-- Fim da Seção HERO -->
 
-  <!-- Modal / Toast Informativo e Elegante para Interação do Botão CTA (Slide-Up Reveal) -->
-  <div class="stage-modal-backdrop" id="stageModalBackdrop" aria-hidden="true">
-    <div class="stage-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="stage-modal-header">
-        <div class="stage-modal-pill">
-          <span class="stage-modal-pill-dot"></span>
-          ETAPA ATUAL: HERO
+  <main>
+    <!-- =========================================================================
+         2. SEÇÃO HERO (TOPO)
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Barra Superior Editorial (Inspiração John Gearhart) -->
+      <div class="hero-top-bar">
+        <div class="hero-brand">
+          <span class="brand-badge-editorial">PORTFÓLIO OFICIAL</span>
         </div>
-        <button type="button" class="stage-modal-close" id="stageModalClose" aria-label="Fechar mensagem">
-          &times;
-        </button>
+
+        <div class="hero-status-pill" aria-label="Status profissional">
+          <span class="status-indicator"></span>
+          <span class="status-text">Disponível para oportunidades</span>
+        </div>
+
+        <div class="hero-edition">
+          <span>Edição 2026 ✦ Brasil</span>
+        </div>
       </div>
 
-      <div class="stage-modal-body">
-        <h2 class="stage-modal-title" id="modalTitle">Próximas Seções em Construção!</h2>
-        <p class="stage-modal-desc">
-          Você está visualizando a <strong>Etapa 1 (Seção Hero)</strong> do portfólio de <strong>Emilly Barbosa</strong>, projetado com layout editorial, tipografia marcante e animações puras em CSS e Vanilla JS.
+      <!-- Conteúdo Central do HERO -->
+      <div class="hero-container">
+        
+        <!-- Linhas decorativas de estilo editorial -->
+        <div class="editorial-lines" aria-hidden="true">
+          <span class="line-left"></span>
+          <span class="line-tag">ED. 01 — BOAS-VINDAS</span>
+          <span class="line-right"></span>
+        </div>
+
+        <div class="hero-content">
+          <!-- Cargo em destaque -->
+          <div class="hero-role-wrapper">
+            <span class="hero-role-badge">
+              <svg class="role-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              Desenvolvedora de Software Jr.
+            </span>
+          </div>
+
+          <!-- Nome em destaque principal com tipografia artística Dr Sugiyama -->
+          <h1 class="hero-title">
+            <span class="hero-title-name">Emilly Barbosa</span>
+          </h1>
+
+          <!-- Frase de Apresentação Oficial -->
+          <p class="hero-statement">
+            "Desenvolvo software com código organizado, boa usabilidade e foco em soluções práticas."
+          </p>
+
+          <!-- Card de Metadados / Stack Base -->
+          <div class="hero-meta-card">
+            <div class="meta-item">
+              <span class="meta-label">Stack Base</span>
+              <span class="meta-value">HTML5 ✦ CSS3 ✦ JavaScript (Vanilla)</span>
+            </div>
+            <div class="meta-divider" aria-hidden="true"></div>
+            <div class="meta-item">
+              <span class="meta-label">Foco de Atuação</span>
+              <span class="meta-value">Frontend & Interfaces Web Criativas</span>
+            </div>
+          </div>
+
+          <!-- Botão CTA com Animação de Preenchimento (Inspiração Elespacio) -->
+          <div class="hero-action-wrapper">
+            <a href="#sobre" class="btn-cta" id="btnExplore" aria-label="Explorar seções do portfólio">
+              <span class="btn-cta-bg"></span>
+              <span class="btn-cta-content">
+                <span class="btn-cta-text">Explorar portfólio</span>
+                <span class="btn-cta-icon-wrapper" aria-hidden="true">
+                  <svg class="btn-cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Marquee Animado Contínuo (Inspiração Bhavana Kulkarni) -->
+      <div class="hero-marquee-wrapper" aria-label="Destaques de atuação">
+        <div class="hero-marquee-track">
+          <div class="hero-marquee-group">
+            <span>DESENVOLVIMENTO WEB</span>
+            <span class="marquee-bullet">✦</span>
+            <span>CÓDIGO ORGANIZADO</span>
+            <span class="marquee-bullet">✦</span>
+            <span>USABILIDADE & BOA EXPERIÊNCIA</span>
+            <span class="marquee-bullet">✦</span>
+            <span>JAVASCRIPT PURO</span>
+            <span class="marquee-bullet">✦</span>
+            <span>SOLUÇÕES PRÁTICAS</span>
+            <span class="marquee-bullet">✦</span>
+            <span>HTML5 & CSS3</span>
+            <span class="marquee-bullet">✦</span>
+            <span>DESIGN EDITORIAL</span>
+            <span class="marquee-bullet">✦</span>
+          </div>
+          <div class="hero-marquee-group" aria-hidden="true">
+            <span>DESENVOLVIMENTO WEB</span>
+            <span class="marquee-bullet">✦</span>
+            <span>CÓDIGO ORGANIZADO</span>
+            <span class="marquee-bullet">✦</span>
+            <span>USABILIDADE & BOA EXPERIÊNCIA</span>
+            <span class="marquee-bullet">✦</span>
+            <span>JAVASCRIPT PURO</span>
+            <span class="marquee-bullet">✦</span>
+            <span>SOLUÇÕES PRÁTICAS</span>
+            <span class="marquee-bullet">✦</span>
+            <span>HTML5 & CSS3</span>
+            <span class="marquee-bullet">✦</span>
+            <span>DESIGN EDITORIAL</span>
+            <span class="marquee-bullet">✦</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         3. SEÇÃO SOBRE MIM / SABER MAIS (Requisito 2 de funcionalidades.md)
+         ========================================================================= -->
+    <section class="about-section section-padding reveal-on-scroll" id="sobre">
+      <div class="section-container">
+        
+        <!-- Cabeçalho Editorial da Seção -->
+        <div class="section-header">
+          <span class="section-tag">CONHEÇA MINHA TRAJETÓRIA</span>
+          <h2 class="section-title">
+            Sobre <span class="signature-font">Mim</span>
+          </h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Coluna 1: Apresentação Principal e Descrição Oficial -->
+          <div class="about-main-card">
+            <div class="about-badge">
+              <span class="badge-dot"></span>
+              Perfil Profissional
+            </div>
+
+            <h3 class="about-headline">
+              Construindo experiências digitais com paixão por código limpo e soluções eficientes.
+            </h3>
+
+            <!-- Descrição Oficial fornecida nos requisitos -->
+            <p class="about-text-lead">
+              "Desenvolvedora em início de carreira, construindo uma base sólida nas tecnologias fundamentais da web: HTML, CSS e JavaScript. Busco minha primeira oportunidade no mercado para colocar meus conhecimentos em prática, aprender diariamente com a equipe e evoluir constantemente na área de tecnologia."
+            </p>
+
+            <!-- Filosofia de Desenvolvimento -->
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <span class="pillar-icon">🎯</span>
+                <div class="pillar-info">
+                  <h4>Foco em Usabilidade</h4>
+                  <p>Interfaces pensadas para serem simples, acessíveis e intuitivas para todos os usuários.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-icon">⚡</span>
+                <div class="pillar-info">
+                  <h4>Fundamentos Sólidos</h4>
+                  <p>Domínio pleno do trio nativo da web, sem dependências desnecessárias ou peso excessivo.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-icon">🌱</span>
+                <div class="pillar-info">
+                  <h4>Evolução Contínua</h4>
+                  <p>Vontade ativa de absorver novos aprendizados e colaborar em equipe para desafios reais.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#projetos" class="btn-editorial">
+                <span>Ver Meus Projetos</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contato" class="btn-editorial-ghost">
+                <span>Entrar em Contato</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Cards 3D Flip de Conquistas & Habilidades (Inspiração Studio Nikita) -->
+          <div class="about-cards-col">
+            <div class="skills-intro">
+              <span class="skills-intro-tag">CARD INTERATIVO (PASSE O CURSOR OU TOQUE)</span>
+              <h4>Competências Fundamentais</h4>
+            </div>
+
+            <div class="flip-cards-grid">
+              
+              <!-- Card 3D Flip 1: HTML5 -->
+              <div class="flip-card" tabindex="0" role="region" aria-label="Competência HTML5">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="card-icon-box">🏷️</div>
+                    <h5 class="flip-title">HTML5 Semântico</h5>
+                    <p class="flip-subtitle">Estrutura & Acessibilidade</p>
+                    <span class="flip-hint">Girar card ↻</span>
+                  </div>
+                  <div class="flip-card-back">
+                    <h5 class="flip-back-title">HTML5</h5>
+                    <p class="flip-back-desc">
+                      Estruturas bem fundamentadas, SEO semântico, acessibilidade (ARIA) e hierarquia de tags limpa.
+                    </p>
+                    <div class="flip-tags">
+                      <span>Semântica</span>
+                      <span>SEO</span>
+                      <span>DOM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3D Flip 2: CSS3 -->
+              <div class="flip-card" tabindex="0" role="region" aria-label="Competência CSS3">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="card-icon-box">🎨</div>
+                    <h5 class="flip-title">CSS3 Moderno</h5>
+                    <p class="flip-subtitle">Estilo & Responsividade</p>
+                    <span class="flip-hint">Girar card ↻</span>
+                  </div>
+                  <div class="flip-card-back">
+                    <h5 class="flip-back-title">CSS3</h5>
+                    <p class="flip-back-desc">
+                      Flexbox, CSS Grid, Variáveis CSS (Custom Properties), animações fluidas e design 100% responsivo.
+                    </p>
+                    <div class="flip-tags">
+                      <span>Flexbox</span>
+                      <span>Grid</span>
+                      <span>Keyframes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3D Flip 3: JavaScript -->
+              <div class="flip-card" tabindex="0" role="region" aria-label="Competência JavaScript">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="card-icon-box">⚙️</div>
+                    <h5 class="flip-title">JavaScript Puro</h5>
+                    <p class="flip-subtitle">Lógica & Dinamismo</p>
+                    <span class="flip-hint">Girar card ↻</span>
+                  </div>
+                  <div class="flip-card-back">
+                    <h5 class="flip-back-title">Vanilla JS</h5>
+                    <p class="flip-back-desc">
+                      Manipulação interativa do DOM, programação assíncrona, LocalStorage e lógica por turnos.
+                    </p>
+                    <div class="flip-tags">
+                      <span>ES6+</span>
+                      <span>Eventos</span>
+                      <span>LocalStorage</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3D Flip 4: Usabilidade -->
+              <div class="flip-card" tabindex="0" role="region" aria-label="Competência Usabilidade">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="card-icon-box">✨</div>
+                    <h5 class="flip-title">Usabilidade</h5>
+                    <p class="flip-subtitle">Foco no Usuário</p>
+                    <span class="flip-hint">Girar card ↻</span>
+                  </div>
+                  <div class="flip-card-back">
+                    <h5 class="flip-back-title">Experiência</h5>
+                    <p class="flip-back-desc">
+                      Interfaces agradáveis, microinterações refinadas, contrastes acessíveis e clareza visual.
+                    </p>
+                    <div class="flip-tags">
+                      <span>UX/UI</span>
+                      <span>Detalhes</span>
+                      <span>Microinterações</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. GALERIA DE PROJETOS (Requisito 3 de funcionalidades.md)
+         ========================================================================= -->
+    <section class="projects-section section-padding reveal-on-scroll" id="projetos">
+      <div class="section-container">
+        
+        <!-- Cabeçalho Editorial da Galeria -->
+        <div class="section-header">
+          <span class="section-tag">PORTFÓLIO DE DESENVOLVIMENTO</span>
+          <h2 class="section-title">
+            Galeria de <span class="signature-font">Projetos</span>
+          </h2>
+          <p class="section-subtitle">
+            Dois projetos autorais desenvolvidos com tecnologias puras da web, com lógica bem estruturada, interatividade rica e efeitos visuais imersivos.
+          </p>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- Grid de Cards dos Projetos (Inspiração Arc Marumo 3D & Bhavana Kulkarni Zoom) -->
+        <div class="projects-grid">
+          
+          <!-- CARD PROJETO 1: BATALHA POKÉMON -->
+          <article class="project-card" data-project-id="batalha-pokemon">
+            <div class="project-media-wrapper">
+              <img src="img/projetos/batalha-pokemon.jpg" alt="Capa ilustrativa do jogo Batalha Pokémon com Pikachu e Mewtwo" class="project-img" loading="lazy">
+              <div class="project-media-overlay">
+                <span class="overlay-tag">Web Game Interativo</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header-info">
+                <span class="project-number">01 / PROJETO</span>
+                <h3 class="project-name">Batalha Pokémon</h3>
+              </div>
+
+              <p class="project-short-desc">
+                Jogo de combate por turnos para navegador com seleção de monstrinhos, modos Aventura e Desafio de Chefes, habilidades especiais, vantagens elementais e sistema completo de progressão salvo no navegador.
+              </p>
+
+              <!-- Tecnologias Utilizadas -->
+              <div class="project-tech-stack" aria-label="Tecnologias utilizadas no projeto">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">LocalStorage</span>
+              </div>
+
+              <!-- Ações do Card -->
+              <div class="project-actions">
+                <button type="button" class="btn-project-details" data-open-modal="batalha-pokemon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Ver Detalhes</span>
+                </button>
+
+                <a href="https://github.com/36811-maker/atualiza-o-do-jogo" target="_blank" rel="noopener noreferrer" class="btn-project-github" aria-label="Acessar repositório do Batalha Pokémon no GitHub">
+                  <svg class="github-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Ver no GitHub</span>
+                </a>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- CARD PROJETO 2: POKÉMON CARDS -->
+          <article class="project-card" data-project-id="pokemon-cards">
+            <div class="project-media-wrapper">
+              <img src="img/projetos/pokemon-cards.jpg" alt="Capa ilustrativa do site Pokémon Cards com cartas colecionáveis de Pikachu, Charizard e Mewtwo" class="project-img" loading="lazy">
+              <div class="project-media-overlay">
+                <span class="overlay-tag">Cards 3D Colecionáveis</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header-info">
+                <span class="project-number">02 / PROJETO</span>
+                <h3 class="project-name">Pokémon Cards</h3>
+              </div>
+
+              <p class="project-short-desc">
+                Site interativo com cards temáticos em estilo visual 3D, contendo ilustrações, tipos, características e habilidades dos Pokémon com animações fluidas inspiradas nas tradicionais cartas colecionáveis.
+              </p>
+
+              <!-- Tecnologias Utilizadas -->
+              <div class="project-tech-stack" aria-label="Tecnologias utilizadas no projeto">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+
+              <!-- Ações do Card -->
+              <div class="project-actions">
+                <button type="button" class="btn-project-details" data-open-modal="pokemon-cards">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Ver Detalhes</span>
+                </button>
+
+                <a href="https://github.com/36811-maker/pokemon.cards" target="_blank" rel="noopener noreferrer" class="btn-project-github" aria-label="Acessar repositório do Pokémon Cards no GitHub">
+                  <svg class="github-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Ver no GitHub</span>
+                </a>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SEÇÃO DE CONTATO (Requisito 5 de funcionalidades.md)
+         ========================================================================= -->
+    <section class="contact-section section-padding reveal-on-scroll" id="contato">
+      <div class="section-container">
+        
+        <!-- Cabeçalho Editorial do Contato -->
+        <div class="section-header">
+          <span class="section-tag">VAMOS CONVERSAR</span>
+          <h2 class="section-title">
+            Entre em <span class="signature-font">Contato</span>
+          </h2>
+          <p class="section-subtitle">
+            Estou em busca da minha primeira oportunidade como Desenvolvedora de Software Jr. Tem uma vaga, projeto ou desafio? Mande uma mensagem!
+          </p>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Coluna 1: Informações e Metadados do Perfil -->
+          <div class="contact-info-panel">
+            <div class="info-highlight-card">
+              <span class="info-card-badge">DISPONIBILIDADE</span>
+              <h3>Pronta para somar no seu time</h3>
+              <p>
+                Comprometida com código organizado, aprendizado rápido e dedicação contínua às metas da equipe.
+              </p>
+            </div>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div>
+                  <span class="info-label">Cargo Atual</span>
+                  <span class="info-value">Desenvolvedora de Software Jr.</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon-wrapper">
+                  <svg class="github-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="info-label">GitHub Oficial</span>
+                  <a href="https://github.com/36811-maker" target="_blank" rel="noopener noreferrer" class="info-link">github.com/36811-maker ↗</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div>
+                  <span class="info-label">Localização</span>
+                  <span class="info-value">Brasil (Remoto / Presencial)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Formulário com Validação em JavaScript Puro -->
+          <div class="contact-form-panel">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-header">
+                <h4>Envie uma Mensagem</h4>
+                <p>Preencha os campos abaixo para iniciar nosso contato.</p>
+              </div>
+
+              <!-- Mensagem de Alerta / Sucesso dinâmico -->
+              <div class="form-alert" id="formAlert" role="alert" aria-live="polite"></div>
+
+              <!-- Campo Nome -->
+              <div class="form-group">
+                <label for="userName" class="form-label">Seu Nome <span class="required">*</span></label>
+                <input type="text" id="userName" name="userName" class="form-input" placeholder="Ex: Maria Oliveira" required>
+                <span class="form-error" id="nameError"></span>
+              </div>
+
+              <!-- Campo E-mail -->
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Seu E-mail <span class="required">*</span></label>
+                <input type="email" id="userEmail" name="userEmail" class="form-input" placeholder="seuemail@exemplo.com" required>
+                <span class="form-error" id="emailError"></span>
+              </div>
+
+              <!-- Campo Assunto -->
+              <div class="form-group">
+                <label for="userSubject" class="form-label">Assunto <span class="required">*</span></label>
+                <input type="text" id="userSubject" name="userSubject" class="form-input" placeholder="Ex: Oportunidade Desenvolvedora Jr." required>
+                <span class="form-error" id="subjectError"></span>
+              </div>
+
+              <!-- Campo Mensagem -->
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Mensagem <span class="required">*</span></label>
+                <textarea id="userMessage" name="userMessage" rows="5" class="form-textarea" placeholder="Descreva sua mensagem ou detalhes da oportunidade..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <!-- Botão de Envio com Preenchimento Animado (Elespacio) -->
+              <button type="submit" class="btn-cta btn-submit" id="btnSubmit">
+                <span class="btn-cta-bg"></span>
+                <span class="btn-cta-content">
+                  <span class="btn-cta-text">Enviar Mensagem</span>
+                  <span class="btn-cta-icon-wrapper" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </span>
+                </span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. RODAPÉ EDITORIAL
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo signature-font">Emilly Barbosa</span>
+          <p class="footer-phrase">Desenvolvendo software com código organizado, boa usabilidade e foco em soluções práticas.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero">Início</a>
+          <a href="#sobre">Sobre Mim</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+          <a href="https://github.com/36811-maker" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 Emilly Barbosa. Todos os direitos reservados. Desenvolvido exclusivamente com HTML5, CSS3 e JavaScript Puro.
         </p>
-        <div class="stage-modal-upcoming">
-          <span class="upcoming-label">Próximos passos programados no plano de desenvolvimento:</span>
-          <ul class="upcoming-list">
-            <li><span>✦</span> Menu de navegação fixo</li>
-            <li><span>✦</span> Seção Sobre Mim</li>
-            <li><span>✦</span> Galeria de Projetos (Batalha Pokémon & Pokémon Cards)</li>
-            <li><span>✦</span> Animações de Rolagem, Contato e Modo Claro</li>
-          </ul>
-        </div>
+        <a href="#hero" class="btn-back-to-top" aria-label="Voltar ao topo da página">
+          <span>Topo</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
       </div>
+    </div>
+  </footer>
 
-      <div class="stage-modal-footer">
-        <button type="button" class="stage-modal-btn" id="stageModalConfirm">
-          Entendido
-        </button>
+  <!-- =========================================================================
+       7. MODAL DINÂMICO DE DETALHES DOS PROJETOS (Inspiração John Gearhart & Nikita)
+       ========================================================================= -->
+  <div class="project-modal-backdrop" id="projectModalBackdrop" aria-hidden="true">
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+      <button type="button" class="project-modal-close" id="projectModalClose" aria-label="Fechar detalhes do projeto">
+        &times;
+      </button>
+
+      <div class="project-modal-content">
+        <div class="project-modal-media">
+          <img src="" alt="" id="modalProjectImg" class="modal-project-img">
+        </div>
+
+        <div class="project-modal-info">
+          <span class="modal-project-tag" id="modalProjectTag">PROJETO OFICIAL</span>
+          <h3 class="modal-project-title" id="modalProjectTitle">Título do Projeto</h3>
+
+          <div class="modal-project-section">
+            <h4 class="modal-subtitle">Descrição do Projeto</h4>
+            <p class="modal-project-desc" id="modalProjectDesc">Descrição detalhada...</p>
+          </div>
+
+          <div class="modal-project-section">
+            <h4 class="modal-subtitle">Objetivo</h4>
+            <p class="modal-project-goal" id="modalProjectGoal">Objetivo...</p>
+          </div>
+
+          <div class="modal-project-section">
+            <h4 class="modal-subtitle">Tecnologias Utilizadas</h4>
+            <ul class="modal-tech-list" id="modalProjectTechList"></ul>
+          </div>
+
+          <div class="modal-project-actions">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-github" id="modalProjectGithubLink">
+              <svg class="github-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Ver no GitHub</span>
+            </a>
+            <button type="button" class="btn-modal-close-action" id="modalCloseActionBtn">
+              Fechar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -187,4 +689,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
