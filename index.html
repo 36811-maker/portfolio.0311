@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Emilly Barbosa — Desenvolvedora de Software Jr. Conheça meus projetos, trajetória e soluções com código organizado e usabilidade.">
+  <meta name="author" content="Emilly Barbosa">
+  <title>Emilly Barbosa — Desenvolvedora de Software Jr.</title>
+
+  <!-- Google Fonts: Comfortaa (textos, subtítulos, botões) e Dr Sugiyama (título artístico e assinatura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dr+Sugiyama&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Luz de fundo interativa (Glow suave inspirado em Studio Nikita) -->
+  <div class="interactive-glow" id="interactiveGlow" aria-hidden="true"></div>
+
+  <!-- Início da Seção HERO (Desenvolvimento exclusivo desta Etapa 1) -->
+  <header class="hero-section" id="hero">
+    
+    <!-- Barra Superior Editorial (Inspiração John Gearhart) -->
+    <div class="hero-top-bar">
+      <div class="hero-brand">
+        <span class="brand-monogram">EB</span>
+        <span class="brand-label">Portfólio Editorial</span>
+      </div>
+
+      <div class="hero-status-pill" aria-label="Status profissional">
+        <span class="status-indicator"></span>
+        <span class="status-text">Disponível para oportunidades</span>
+      </div>
+
+      <div class="hero-edition">
+        <span>Edição 2026 ✦ Brasil</span>
+      </div>
+    </div>
+
+    <!-- Conteúdo Central do HERO -->
+    <div class="hero-container">
+      
+      <!-- Linhas decorativas sutis de estilo catálogo/editorial -->
+      <div class="editorial-lines" aria-hidden="true">
+        <span class="line-left"></span>
+        <span class="line-tag">ED. 01 — INÍCIO</span>
+        <span class="line-right"></span>
+      </div>
+
+      <div class="hero-content">
+        <!-- Cargo em destaque com badge editorial -->
+        <div class="hero-role-wrapper">
+          <span class="hero-role-badge">
+            <svg class="role-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Desenvolvedora de Software Jr.
+          </span>
+        </div>
+
+        <!-- Nome em destaque principal com tipografia artística Dr Sugiyama -->
+        <h1 class="hero-title">
+          <span class="hero-title-name">Emilly Barbosa</span>
+        </h1>
+
+        <!-- Frase de Apresentação Oficial -->
+        <p class="hero-statement">
+          "Desenvolvo software com código organizado, boa usabilidade e foco em soluções práticas."
+        </p>
+
+        <!-- Card de Destaque Tecnológico / Metadados do Perfil -->
+        <div class="hero-meta-card">
+          <div class="meta-item">
+            <span class="meta-label">Stack Base</span>
+            <span class="meta-value">HTML5 ✦ CSS3 ✦ JavaScript (Vanilla)</span>
+          </div>
+          <div class="meta-divider" aria-hidden="true"></div>
+          <div class="meta-item">
+            <span class="meta-label">Foco de Atuação</span>
+            <span class="meta-value">Frontend & Interfaces Web Criativas</span>
+          </div>
+        </div>
+
+        <!-- Botão CTA com Animação de Preenchimento Dinâmico (Inspiração Elespacio) -->
+        <div class="hero-action-wrapper">
+          <button type="button" class="btn-cta" id="btnExplore" aria-haspopup="dialog" aria-expanded="false">
+            <span class="btn-cta-bg"></span>
+            <span class="btn-cta-content">
+              <span class="btn-cta-text">Explorar portfólio</span>
+              <span class="btn-cta-icon-wrapper" aria-hidden="true">
+                <svg class="btn-cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Marquee Animado Contínuo no Rodapé do Hero (Inspiração Bhavana Kulkarni) -->
+    <div class="hero-marquee-wrapper" aria-label="Destaques de atuação">
+      <div class="hero-marquee-track">
+        <div class="hero-marquee-group">
+          <span>DESENVOLVIMENTO WEB</span>
+          <span class="marquee-bullet">✦</span>
+          <span>CÓDIGO ORGANIZADO</span>
+          <span class="marquee-bullet">✦</span>
+          <span>USABILIDADE & BOA EXPERIÊNCIA</span>
+          <span class="marquee-bullet">✦</span>
+          <span>JAVASCRIPT PURO</span>
+          <span class="marquee-bullet">✦</span>
+          <span>SOLUÇÕES PRÁTICAS</span>
+          <span class="marquee-bullet">✦</span>
+          <span>HTML5 & CSS3</span>
+          <span class="marquee-bullet">✦</span>
+          <span>DESIGN EDITORIAL</span>
+          <span class="marquee-bullet">✦</span>
+        </div>
+        <!-- Grupo duplicado para criar o efeito de loop infinito perfeitamente fluido -->
+        <div class="hero-marquee-group" aria-hidden="true">
+          <span>DESENVOLVIMENTO WEB</span>
+          <span class="marquee-bullet">✦</span>
+          <span>CÓDIGO ORGANIZADO</span>
+          <span class="marquee-bullet">✦</span>
+          <span>USABILIDADE & BOA EXPERIÊNCIA</span>
+          <span class="marquee-bullet">✦</span>
+          <span>JAVASCRIPT PURO</span>
+          <span class="marquee-bullet">✦</span>
+          <span>SOLUÇÕES PRÁTICAS</span>
+          <span class="marquee-bullet">✦</span>
+          <span>HTML5 & CSS3</span>
+          <span class="marquee-bullet">✦</span>
+          <span>DESIGN EDITORIAL</span>
+          <span class="marquee-bullet">✦</span>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <!-- Fim da Seção HERO -->
+
+  <!-- Modal / Toast Informativo e Elegante para Interação do Botão CTA (Slide-Up Reveal) -->
+  <div class="stage-modal-backdrop" id="stageModalBackdrop" aria-hidden="true">
+    <div class="stage-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="stage-modal-header">
+        <div class="stage-modal-pill">
+          <span class="stage-modal-pill-dot"></span>
+          ETAPA ATUAL: HERO
+        </div>
+        <button type="button" class="stage-modal-close" id="stageModalClose" aria-label="Fechar mensagem">
+          &times;
+        </button>
+      </div>
+
+      <div class="stage-modal-body">
+        <h2 class="stage-modal-title" id="modalTitle">Próximas Seções em Construção!</h2>
+        <p class="stage-modal-desc">
+          Você está visualizando a <strong>Etapa 1 (Seção Hero)</strong> do portfólio de <strong>Emilly Barbosa</strong>, projetado com layout editorial, tipografia marcante e animações puras em CSS e Vanilla JS.
+        </p>
+        <div class="stage-modal-upcoming">
+          <span class="upcoming-label">Próximos passos programados no plano de desenvolvimento:</span>
+          <ul class="upcoming-list">
+            <li><span>✦</span> Menu de navegação fixo</li>
+            <li><span>✦</span> Seção Sobre Mim</li>
+            <li><span>✦</span> Galeria de Projetos (Batalha Pokémon & Pokémon Cards)</li>
+            <li><span>✦</span> Animações de Rolagem, Contato e Modo Claro</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-modal-footer">
+        <button type="button" class="stage-modal-btn" id="stageModalConfirm">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script JavaScript Puro -->
+  <script src="script.js"></script>
+</body>
+</html>
+

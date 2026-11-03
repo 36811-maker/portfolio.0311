@@ -1,0 +1,850 @@
+/* ==========================================================================
+   PORTFÓLIO PESSOAL — EMILLY BARBOSA
+   ETAPA 1: SEÇÃO HERO (TOPO)
+   Identidade: Paleta Rosa, Tipografia Dr Sugiyama & Comfortaa, Estilo Editorial
+   Tecnologias: CSS3 Puro (Vanilla CSS)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIÁVEIS DE IDENTIDADE VISUAL & CORES OFICIAIS
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta Oficial do Projeto */
+  --color-primary: #FF758F;      /* Rosa vibrante: botões principais, links ativos e destaque */
+  --color-bg: #FFF0F3;           /* Rosa champagne claro: fundo principal do site */
+  --color-accent: #FFB3C1;       /* Rosa pastel iluminado: badges, cards secundários e bordas */
+  --color-title: #2E000B;        /* Vinho profundo: títulos e máximo contraste */
+  --color-text: #70001B;         /* Vinho suave: parágrafos e subtítulos */
+
+  /* Cores de Apoio e Transparências Delicadas */
+  --color-primary-glow: rgba(255, 117, 143, 0.4);
+  --color-accent-subtle: rgba(255, 179, 193, 0.25);
+  --color-card-bg: rgba(255, 255, 255, 0.65);
+  --color-border-subtle: rgba(255, 117, 143, 0.2);
+  --color-border-hover: rgba(255, 117, 143, 0.45);
+  --color-white: #FFFFFF;
+
+  /* Fontes Oficiais */
+  --font-title: 'Dr Sugiyama', cursive;
+  --font-body: 'Comfortaa', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Transições e Curvas Suaves */
+  --transition-fast: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-editorial: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Sombras Delicadas */
+  --shadow-sm: 0 4px 16px rgba(112, 0, 27, 0.05);
+  --shadow-md: 0 8px 28px rgba(112, 0, 27, 0.08);
+  --shadow-hover: 0 14px 36px rgba(255, 117, 143, 0.22);
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & REGRAS GERAIS
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(255, 179, 193, 0.32) 0%, transparent 40%),
+    radial-gradient(circle at 90% 75%, rgba(255, 117, 143, 0.18) 0%, transparent 45%);
+}
+
+/* --------------------------------------------------------------------------
+   3. EFEITO GLOW INTERATIVO DO CURSOR (Inspiração Studio Nikita)
+   -------------------------------------------------------------------------- */
+.interactive-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 117, 143, 0.18) 0%, rgba(255, 179, 193, 0.08) 45%, rgba(255, 240, 243, 0) 70%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* --------------------------------------------------------------------------
+   4. ESTRUTURA GERAL DA SEÇÃO HERO
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   5. BARRA SUPERIOR EDITORIAL (Inspiração John Gearhart)
+   -------------------------------------------------------------------------- */
+.hero-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px;
+  animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px var(--color-primary-glow);
+}
+
+.brand-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-title);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 240, 243, 0.9);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2ec4b6;
+  box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.7);
+  animation: pulseStatus 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.hero-edition {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   6. CONTEÚDO CENTRAL DO HERO
+   -------------------------------------------------------------------------- */
+.hero-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Linhas Editoriais de Contorno */
+.editorial-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 1.75rem;
+  opacity: 0.85;
+}
+
+.line-left, .line-right {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+}
+
+.line-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cargo em Destaque */
+.hero-role-wrapper {
+  margin-bottom: 0.85rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-title);
+  letter-spacing: 0.04em;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-role-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.role-icon {
+  color: var(--color-primary);
+}
+
+/* Nome em Destaque com Dr Sugiyama */
+.hero-title {
+  margin: 0.25rem 0 1rem;
+  line-height: 1.1;
+  animation: fadeInUp 0.85s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-title-name {
+  display: block;
+  font-family: var(--font-title);
+  font-size: clamp(4.2rem, 10.5vw, 9.2rem);
+  font-weight: 400;
+  color: var(--color-title);
+  letter-spacing: 0.02em;
+  text-shadow: 2px 4px 18px rgba(255, 117, 143, 0.35);
+  transform: rotate(-1.5deg);
+  user-select: none;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-title-name:hover {
+  transform: rotate(-0.5deg) scale(1.02);
+}
+
+/* Frase de Apresentação Oficial */
+.hero-statement {
+  max-width: 760px;
+  margin: 0 auto 1.85rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.65;
+  color: var(--color-text);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  animation: fadeInUp 0.95s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Card de Destaque Tecnológico / Metadados */
+.hero-meta-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.85rem 1.85rem;
+  background: var(--color-card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.25rem;
+  animation: fadeInUp 1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-meta-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+}
+
+.meta-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-title);
+}
+
+.meta-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   7. BOTÃO CTA COM PREENCHIMENTO ANIMADO (Inspiração Elespacio)
+   -------------------------------------------------------------------------- */
+.hero-action-wrapper {
+  animation: fadeInUp 1.05s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.btn-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.15rem 2.75rem;
+  background-color: var(--color-title);
+  color: var(--color-white);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(46, 0, 11, 0.22);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary), #ff4d6d);
+  border-radius: 999px;
+  transform: translateY(100%);
+  transition: transform var(--transition-smooth);
+  z-index: 1;
+}
+
+.btn-cta-content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-cta-text {
+  transition: letter-spacing var(--transition-fast);
+}
+
+.btn-cta-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.btn-cta-icon {
+  transition: transform var(--transition-fast);
+}
+
+/* Efeito Hover do CTA */
+.btn-cta:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(255, 117, 143, 0.45);
+}
+
+.btn-cta:hover .btn-cta-bg {
+  transform: translateY(0);
+}
+
+.btn-cta:hover .btn-cta-text {
+  letter-spacing: 0.05em;
+}
+
+.btn-cta:hover .btn-cta-icon-wrapper {
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(45deg);
+}
+
+.btn-cta:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* --------------------------------------------------------------------------
+   8. MARQUEE COM TEXTOS ANIMADOS (Inspiração Bhavana Kulkarni)
+   -------------------------------------------------------------------------- */
+.hero-marquee-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 0.95rem 0;
+  overflow: hidden;
+  user-select: none;
+  animation: fadeIn 1.2s 0.5s ease both;
+}
+
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.hero-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding-right: 1.75rem;
+  white-space: nowrap;
+  animation: marqueeScroll 24s linear infinite;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-title);
+  text-transform: uppercase;
+}
+
+.hero-marquee-wrapper:hover .hero-marquee-group {
+  animation-play-state: paused;
+}
+
+.marquee-bullet {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. MODAL INFORMATIVO DA ETAPA ATUAL (Inspiração Sphere Slide-Up)
+   -------------------------------------------------------------------------- */
+.stage-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 0, 11, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-smooth);
+}
+
+.stage-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.stage-modal {
+  width: 100%;
+  max-width: 520px;
+  background: var(--color-white);
+  border: 1px solid var(--color-accent);
+  border-radius: 28px;
+  padding: 2.25rem;
+  box-shadow: 0 20px 50px rgba(46, 0, 11, 0.25);
+  transform: translateY(30px) scale(0.96);
+  transition: transform var(--transition-editorial);
+}
+
+.stage-modal-backdrop.active .stage-modal {
+  transform: translateY(0) scale(1);
+}
+
+.stage-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.stage-modal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.stage-modal-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.stage-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.stage-modal-close:hover {
+  color: var(--color-primary);
+  transform: scale(1.15);
+}
+
+.stage-modal-title {
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-title);
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+}
+
+.stage-modal-desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.stage-modal-upcoming {
+  background: var(--color-bg);
+  border-radius: 16px;
+  padding: 1.15rem 1.35rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.upcoming-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin-bottom: 0.65rem;
+}
+
+.upcoming-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.upcoming-list li {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-title);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upcoming-list li span {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+}
+
+.stage-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stage-modal-btn {
+  padding: 0.85rem 1.85rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px var(--color-primary-glow);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.stage-modal-btn:hover {
+  background-color: #ff5778;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   10. ANIMAÇÕES KEYFRAMES
+   -------------------------------------------------------------------------- */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes pulseStatus {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(46, 196, 182, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 196, 182, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   11. RESPONSIVIDADE (Computadores, Notebooks, Tablets e Smartphones)
+   -------------------------------------------------------------------------- */
+
+/* Notebooks e Telas Médias (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-top-bar {
+    padding: 0.85rem 1.25rem;
+  }
+  
+  .hero-edition {
+    display: none; /* Simplifica o topo mantendo a elegância */
+  }
+
+  .hero-container {
+    margin: 1.5rem auto;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1rem 1.25rem 0;
+  }
+
+  .hero-top-bar {
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-brand .brand-label {
+    font-size: 0.78rem;
+  }
+
+  .hero-status-pill {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .editorial-lines {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .line-tag {
+    font-size: 0.65rem;
+  }
+
+  .hero-role-badge {
+    font-size: 0.85rem;
+    padding: 0.45rem 1.1rem;
+  }
+
+  .hero-title-name {
+    font-size: clamp(3.6rem, 13vw, 5.5rem);
+    transform: rotate(-1deg);
+  }
+
+  .hero-statement {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-meta-card {
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .meta-item {
+    text-align: center;
+  }
+
+  .meta-divider {
+    display: none;
+  }
+
+  .btn-cta {
+    padding: 1rem 2.25rem;
+    font-size: 0.98rem;
+  }
+
+  .interactive-glow {
+    display: none; /* Otimização de performance em telas de toque */
+  }
+}
+
+/* Smartphones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0.85rem 0.85rem 0;
+  }
+
+  .hero-top-bar {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hero-status-pill {
+    display: none; /* Foco no monograma em smartphones compactos */
+  }
+
+  .hero-title-name {
+    font-size: clamp(3.2rem, 15vw, 4.4rem);
+    line-height: 1.05;
+  }
+
+  .hero-statement {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+
+  .btn-cta {
+    width: 100%;
+    max-width: 310px;
+    padding: 0.95rem 1.5rem;
+  }
+
+  .stage-modal {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .stage-modal-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Acessibilidade: Redução de Movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-marquee-group {
+    animation: none;
+  }
+}
+
